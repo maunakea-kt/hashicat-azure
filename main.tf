@@ -16,8 +16,7 @@ resource "azurerm_resource_group" "myresourcegroup" {
   location = var.location
 
   tags = {
-    "environment" = "Production",
-    "Billable" = "True"
+    environment = "Production"
   }
 }
 
@@ -137,7 +136,8 @@ resource "azurerm_virtual_machine" "catapp" {
   }
 
   tags = {
-    Department = "devops"
+    "Department" = "devops",
+    "Billable" = "true"
   }
 
   # Added to allow destroy to work correctly.
